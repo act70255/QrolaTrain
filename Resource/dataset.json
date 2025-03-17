@@ -1,0 +1,22 @@
+[
+  {
+    "instruction": "將以下句子翻譯成英文：「人工智慧正在改變我們的生活方式」",
+    "output": "Artificial intelligence is changing the way we live."
+  },
+  {
+    "instruction": "解釋什麼是遞迴函數",
+    "output": "遞迴函數是一種呼叫自身的函數。在程式設計中，當一個問題可以被分解為相同類型但規模較小的子問題時，遞迴是一種有效的解決方案。遞迴函數通常包含基本情況（終止條件）和遞迴情況。"
+  },
+  {
+    "instruction": "計算 5 的階乘",
+    "output": "5 的階乘等於 5 × 4 × 3 × 2 × 1 = 120"
+  },
+  {
+    "instruction": "摘要以下文章：台灣是一個美麗的島嶼，擁有豐富的自然資源和文化遺產。從北部的繁華都市到南部的熱帶風光，台灣提供了多樣化的體驗。台灣的美食也聞名世界，夜市文化尤其受到遊客喜愛。",
+    "output": "台灣是座擁有豐富自然資源與文化遺產的美麗島嶼，從北到南風景多樣，美食與夜市文化享譽全球。"
+  },
+  {
+    "instruction": "寫一個簡單的 Python 函數來檢查一個數字是否為質數",
+    "output": "```python\ndef is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n```"
+  }
+]
