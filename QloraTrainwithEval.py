@@ -123,7 +123,13 @@ training_args = TrainingArguments(
     save_steps=100,
     warmup_steps=50,
     optim="paged_adamw_8bit",
-    evaluation_strategy="epoch"
+    # 驗證參數
+    per_device_eval_batch_size=8,  # 驗證批次大小
+    eval_steps=100,  # 每 100 步進行一次驗證
+    evaluation_strategy="steps",  # 按步驟進行評估 epoch / steps
+    load_best_model_at_end=True,  # 訓練結束時載入最佳模型
+    metric_for_best_model="loss",  # 以損失為指標選擇最佳模型
+    greater_is_better=False,  # 損失越低越好
 )
 
 # 7. 初始化 SFTTrainer
